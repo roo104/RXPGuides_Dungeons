@@ -1,6 +1,6 @@
 # RestedXP Guides - Dungeon Quests
 
-Alliance dungeon quest guides for [RestedXP](https://www.restedxp.com/) on WoW Classic Forever.
+Alliance dungeon and class quest guides for [RestedXP](https://www.restedxp.com/) on WoW Classic Forever.
 
 | Guide | Levels | Quests |
 |---|---|---|
@@ -10,18 +10,27 @@ Alliance dungeon quest guides for [RestedXP](https://www.restedxp.com/) on WoW C
 
 Each guide covers picking up every quest, flight paths between zones, the dungeon run and all turn-ins.
 
+### Class quests
+
+| Guide | Level | Quests |
+|---|---|---|
+| Druid: Bear Form | 10 | Heeding the Call, Moonglade, Great Bear Spirit, Back to Darnassus, Body and Heart |
+| Druid: Cure Poison | 14 | Lessons Anew, The Principal Source, Gathering the Cure, Curing the Sick, Power over Poison |
+| Druid: Aquatic Form | 16 | A Lesson to Learn, Trial of the Lake, Trial of the Sea Lion, Aquatic Form |
+
 ## Install
 
 1. Install RestedXP Guides.
 2. Copy the `RXPGuides_Dungeons` folder into `World of Warcraft\_classic_\Interface\AddOns\` (or your client's AddOns folder).
 3. Log in or `/reload`.
 
-The guides are in the RestedXP guide list under **RestedXP Forever Dungeon Guide (A) → Dungeon Quests**, on Alliance characters.
+The dungeon guides are in the RestedXP guide list under **RestedXP Forever Dungeon Guide (A) → Dungeon Quests**, and the druid guides under **RestedXP Forever Class Quests (A) → Druid**, on Alliance characters.
 
 ## Credits
 
 - Many steps, coordinates and the flight master positions come from the RestedXP guides by RestedXP, licensed CC BY-NC-SA 4.0.
 - Quest chains and quest text come from the [Attune](https://warcraftratings.com) addon by CixiDelmont.
+- The druid chains follow Wowhead's [Druid Class Quests in WoW Classic](https://www.wowhead.com/classic/guide/druid-class-quests-classic-wow) guide.
 
 ## License
 

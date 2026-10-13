@@ -1,6 +1,6 @@
 ## Interface: 16001
 ## Title: RestedXP Guides - Dungeon Quests
-## Notes: Alliance dungeon quest guides for RestedXP (Classic Forever): The Deadmines, The Hall of Thanes, The Stockade
+## Notes: Alliance dungeon and class quest guides for RestedXP (Classic Forever): The Deadmines, The Hall of Thanes, The Stockade, Druid class quests
 ## Author: Jonas Pedersen
 ## Version: 1.0.0
 ## Dependencies: RXPGuides
@@ -9,3 +9,4 @@
 HallOfThanes.lua
 Deadmines.lua
 Stockade.lua
+Druid.lua
