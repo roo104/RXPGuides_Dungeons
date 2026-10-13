@@ -18,6 +18,7 @@ Each guide covers picking up every quest, flight paths between zones, the dungeo
 | Druid: Bear Form | 10 | Heeding the Call, Moonglade, Great Bear Spirit, Back to Darnassus, Body and Heart |
 | Druid: Cure Poison | 14 | Lessons Anew, The Principal Source, Gathering the Cure, Curing the Sick, Power over Poison |
 | Druid: Aquatic Form | 16 | A Lesson to Learn, Trial of the Lake, Trial of the Sea Lion, Aquatic Form |
+| Druid: Cat Form | 20 | The Great Cat Spirit chain (or The Great Windborne Cat Spirit for Skyborne), Blessings of the Great Cat Spirit, To Darnassus |
 
 ## Install
 

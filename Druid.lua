@@ -197,6 +197,7 @@ RXPGuides.RegisterGuide([[
 #group RestedXP Forever Class Quests (A)
 #subgroup Druid
 #name 16 Aquatic Form
+#next 20 Cat Form
 
 step
     .goto 1457/1,2563.98,10179.00
@@ -292,6 +293,98 @@ step
     .goto 1457/1,2563.98,10179.00
     >>Take the portal up to Darnassus. |Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Mathrengyl Bearwalker|r
     .turnin 5061 >> Turn in Aquatic Form
+    .trainer >> Train your class spells
+    .target Mathrengyl Bearwalker
+]])
+
+RXPGuides.RegisterGuide([[
+#forever
+#version 1
+<< Alliance Druid
+#group RestedXP Forever Class Quests (A)
+#subgroup Druid
+#name 20 Cat Form
+
+step
+    .goto 1457/1,2564.600,10179.800
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Mathrengyl Bearwalker|r on the middle level of the Cenarion Enclave in Darnassus
+    .accept 98393 >> Accept The Great Cat Spirit
+    .target Mathrengyl Bearwalker
+step
+    #completewith next
+    .cast 18960 >> Cast Teleport: Moonglade
+    .zoneskip Moonglade
+step
+    .goto 1450/1,-2678.900,8020.000
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Dendrite Starblaze|r up stairs
+    .turnin 98393 >> Turn in The Great Cat Spirit
+    .accept 98341 >> Accept The Great Windborne Cat Spirit << Skyborne
+    .accept 98394 >> Accept The Great Cat Spirit << !Skyborne
+    .target Dendrite Starblaze
+step << !Skyborne
+    .goto 1450/1,-2640.000,7338.900
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to the |cRXP_FRIENDLY_Great Cat Spirit|r in southern Moonglade
+    .turnin 98394 >> Turn in The Great Cat Spirit
+    .accept 98396 >> Accept The Great Cat Spirit
+    .target Great Cat Spirit
+step << Skyborne
+    .goto 1450/1,-2352.700,7375.600,10,0
+    .goto 1450/1,-2394.300,7361.200
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to the |cRXP_FRIENDLY_Avatar of Saeyleenan|r in southern Moonglade
+    .turnin 98341 >> Turn in The Great Windborne Cat Spirit
+    .accept 98404 >> Accept The Great Windborne Cat Spirit
+    .target Avatar of Saeyleenan
+step
+    #completewith next
+    .goto 1450/1,-3046.700,7534.400
+    .subzone 2363 >> Head to the Stormrage Barrow Dens
+step
+    .goto 1450/1,-3117.400,7455.300
+    >>Go deep into the cave and cross the bridge. Find the cat statue in an alcove and click the small orb next to it
+    >>Loot the |cRXP_LOOT_Relic of the Claw|r
+    .complete 98396,2 << !Skyborne -- Relic of the Claw (1)
+    .complete 98404,2 << Skyborne -- Relic of the Claw (1)
+step
+    .goto 1450/1,-3099.200,7485.700
+    >>Click the small orb next to the cat statue
+    >>Loot the |cRXP_LOOT_Relic of the Silent Shadow|r
+    .complete 98396,3 << !Skyborne -- Relic of the Silent Shadow (1)
+    .complete 98404,3 << Skyborne -- Relic of the Silent Shadow (1)
+step
+    .goto 1450/1,-3054.100,7476.800
+    >>Click the small orb next to the cat statue
+    >>Loot the |cRXP_LOOT_Relic of the Fang|r
+    .complete 98396,1 << !Skyborne -- Relic of the Fang (1)
+    .complete 98404,1 << Skyborne -- Relic of the Fang (1)
+step << !Skyborne
+    .goto 1450/1,-2640.000,7338.900
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to the |cRXP_FRIENDLY_Great Cat Spirit|r
+    .turnin 98396 >> Turn in The Great Cat Spirit
+    .accept 98731 >> Accept Blessings of the Great Cat Spirit
+    .target Great Cat Spirit
+step << Skyborne
+    .goto 1450/1,-2395.400,7361.400
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to the |cRXP_FRIENDLY_Avatar of Saeyleenan|r
+    .turnin 98404 >> Turn in The Great Windborne Cat Spirit
+    .accept 98738 >> Accept Blessings of the Great Windborne Cat Spirit
+    .target Avatar of Saeyleenan
+step
+    .goto 1450/1,-2678.200,8021.500
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Dendrite Starblaze|r in Nighthaven
+    .turnin 98731 >> Turn in Blessings of the Great Cat Spirit << !Skyborne
+    .turnin 98738 >> Turn in Blessings of the Great Windborne Cat Spirit << Skyborne
+    .accept 98397 >> Accept To Darnassus
+    .target Dendrite Starblaze
+step
+    .goto 1450/1,-2400.33,7795.33
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Silva Fil'naveth|r
+    .fly Teldrassil >> Fly to Rut'theran Village
+    .target Silva Fil'naveth
+    .zoneskip Moonglade,1
+step
+    .goto 1457/1,2564.400,10179.900
+    >>Take the portal up to Darnassus. |Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Mathrengyl Bearwalker|r
+    .turnin 98397 >> Turn in To Darnassus
     .trainer >> Train your class spells
     .target Mathrengyl Bearwalker
 ]])
