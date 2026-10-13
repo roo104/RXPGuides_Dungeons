@@ -11,6 +11,14 @@ RXPGuides.RegisterGuide([[
 #name 10-15 The Hall of Thanes
 
 step
+    .goto 1426/0,-2009.87,-5860.22,40,0
+    .goto 1426/0,-2034.49,-5922.60
+    >>Kill |cRXP_ENEMY_Dark Iron Spies|r until one drops the |T237385:0|t[|cRXP_LOOT_Dark Iron Map|r]
+    .use 274268 >>|cRXP_WARN_Use the|r |T237385:0|t[|cRXP_LOOT_Dark Iron Map|r] |cRXP_WARN_to start the quest|r
+    .collect 274268,1,96391,1 -- Dark Iron Map (1)
+    .accept 96391 >> Accept Underground Map
+    .mob Dark Iron Spy
+step
     .goto 1426/0,-1394.24,-5797.83
     >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Earthseer Farsen|r
     .turnin 96391 >> Turn in Underground Map
