@@ -388,3 +388,160 @@ step
     .trainer >> Train your class spells
     .target Mathrengyl Bearwalker
 ]])
+
+RXPGuides.RegisterGuide([[
+#forever
+#version 1
+<< Alliance Druid
+#group RestedXP Forever Class Quests (A)
+#subgroup Druid
+#name 16 Cure Poison + Aquatic Form
+#next 20 Cat Form
+
+-- Darnassus and Moonglade pickups
+step
+    .goto 1457/1,2563.98,10179.00
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Mathrengyl Bearwalker|r on the middle level of the Cenarion Enclave in Darnassus
+    .accept 6121 >> Accept Lessons Anew
+    .accept 26 >> Accept A Lesson to Learn
+    .target Mathrengyl Bearwalker
+step
+    #completewith next
+    .cast 18960 >> Cast Teleport: Moonglade
+    .zoneskip Moonglade
+step
+    .goto 1450/1,-2678.76,8019.94
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Dendrite Starblaze|r up stairs
+    .turnin 6121 >> Turn in Lessons Anew
+    .accept 6122 >> Accept The Principal Source
+    .turnin 26 >> Turn in A Lesson to Learn
+    .accept 29 >> Accept Trial of the Lake
+    .target Dendrite Starblaze
+step
+    .goto 1450/1,-2595.43,7697.24
+    >>Swim into Lake Elune'ara
+    >>Open a |cRXP_PICK_Bauble Container|r. Loot it for a |T134125:0|t[Shrine Bauble]
+    >>|cRXP_WARN_It may spawn in different locations underwater|r
+    .collect 15877,1 -- Shrine Bauble (1)
+step
+    .goto 1450/1,-2212.85,7854.68
+    >>|cRXP_WARN_Use the|r |T134125:0|t[Shrine Bauble] |cRXP_WARN_at the Shrine of Remulos tree|r
+    .complete 29,1 -- Complete the Trial of the Lake
+    .use 15877
+step
+    .goto 1450/1,-2224.18,7874.23
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Tajarri|r
+    .turnin 29 >> Turn in Trial of the Lake
+    .accept 272 >> Accept Trial of the Sea Lion
+    .target Tajarri
+
+-- Darkshore
+step
+    .goto 1450/1,-2400.33,7795.33
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Silva Fil'naveth|r
+    .fly Teldrassil >> Fly to Rut'theran Village
+    .target Silva Fil'naveth
+    .zoneskip Moonglade,1
+step
+    .goto 1438/1,841.10,8640.58
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Vesprystus|r
+    .fly Darkshore >> Fly to Darkshore
+    .target Vesprystus
+    .zoneskip Darkshore
+step
+    .goto 1439/1,-660.18,6874.43
+    >>|cRXP_WARN_Use the|r |T134776:0|t[Empty Cliffspring Falls Sampler] |cRXP_WARN_in the water at the entrance of the Cliffspring River Cave|r
+    .complete 6122,1 -- Filled Cliffspring Falls Sampler (1)
+step
+    .goto 1439/1,-259.32,7839.03
+    >>|cRXP_WARN_Swim out in the water|r
+    >>Open the |cRXP_PICK_Strange Lockbox|r. Loot it for the |T133443:0|t[|cRXP_LOOT_Half Pendant of Aquatic Agility|r]
+    .collect 15883,1 -- Half Pendant of Aquatic Agility (1)
+step
+    .goto 1439/1,472.32,6556.100
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Alanndarian Nightsong|r in Auberdine
+    .turnin 6122 >> Turn in The Principal Source
+    .accept 6123 >> Accept Gathering the Cure
+    .target Alanndarian Nightsong
+step
+    #completewith next
+    >>Get 5 |T134187:0|t[Earthroot]
+    >>|cRXP_WARN_Pick it with Herbalism (skill 15), find it in |cRXP_PICK_Battered Chests|r, or buy it from the Auction House|r
+    .complete 6123,1 -- Earthroot (5)
+step
+    .goto 1439/1,98.97,6329.03,90,0
+    .goto 1439/1,105.52,6189.30,90,0
+    .goto 1439/1,164.47,6036.47,90,0
+    .goto 1439/1,-51.68,6136.90,90,0
+    .goto 1439/1,-25.48,6005.90
+    >>Loot |cRXP_LOOT_Lunar Fungus|r on the ground throughout the caves
+    .complete 6123,2 -- Lunar Fungus (12)
+step
+    >>Finish getting 5 |T134187:0|t[Earthroot]
+    >>|cRXP_WARN_Pick it with Herbalism (skill 15), find it in |cRXP_PICK_Battered Chests|r, or buy it from the Auction House|r
+    .complete 6123,1 -- Earthroot (5)
+step
+    .goto 1439/1,472.32,6556.100
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Alanndarian Nightsong|r
+    .turnin 6123 >> Turn in Gathering the Cure
+    .accept 6124 >> Accept Curing the Sick
+    .target Alanndarian Nightsong
+step
+    #loop
+    .goto 1439/1,-313.68,6883.60,40,0
+    .goto 1439/1,98.97,7237.30,40,0
+    .goto 1439/1,347.87,6813.73,40,0
+    >>|cRXP_WARN_Use the|r |T132801:0|t[Curative Animal Salve] |cRXP_WARN_on|r |cRXP_ENEMY_Sickly Deer|r
+    >>|cRXP_WARN_They are spread from the Cliffspring River down to the Ashenvale border|r
+    .complete 6124,1 -- Sickly Deer cured (10)
+    .use 15826
+    .mob Sickly Deer
+
+-- Westfall
+step
+    .goto Darkshore,30.5,40.9
+    .zone Stormwind City >> Take the boat from Auberdine to Stormwind
+step
+    .goto 1453/0,490.03,-8835.82
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Dungar Longdrink|r
+    >>|cRXP_WARN_If you do not have the Westfall flight path, run south through Elwynn Forest instead|r
+    .fly Westfall >> Fly to Westfall
+    .target Dungar Longdrink
+    .zoneskip Westfall
+step
+    .goto Westfall,17.928,33.099
+    >>|cRXP_WARN_Swim out to sea off the west coast of Westfall|r
+    >>Open the |cRXP_PICK_Strange Lockbox|r deep underwater. Loot it for the |T133442:0|t[|cRXP_LOOT_Half Pendant of Aquatic Endurance|r]
+    .collect 15882,1 -- Half Pendant of Aquatic Endurance (1)
+
+-- Moonglade and Darnassus turn-ins
+step
+    #completewith next
+    .cast 18960 >> Cast Teleport: Moonglade
+    .zoneskip Moonglade
+step
+    .goto 1450/1,-2212.85,7854.68
+    .use 15883 >>|cRXP_WARN_Use the|r |T133443:0|t[Half Pendant of Aquatic Agility] |cRXP_WARN_to combine it with the|r |T133442:0|t[Half Pendant of Aquatic Endurance] |cRXP_WARN_at the Shrine of Remulos|r
+    .complete 272,1 -- Pendant of the Sea Lion (1)
+step
+    .goto 1450/1,-2678.76,8019.94
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Dendrite Starblaze|r up stairs
+    .turnin 6124 >> Turn in Curing the Sick
+    .accept 6125 >> Accept Power over Poison
+    .turnin 272 >> Turn in Trial of the Sea Lion
+    .accept 5061 >> Accept Aquatic Form
+    .target Dendrite Starblaze
+step
+    .goto 1450/1,-2400.33,7795.33
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Silva Fil'naveth|r
+    .fly Teldrassil >> Fly to Rut'theran Village
+    .target Silva Fil'naveth
+    .zoneskip Moonglade,1
+step
+    .goto 1457/1,2563.98,10179.00
+    >>Take the portal up to Darnassus. |Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Mathrengyl Bearwalker|r
+    .turnin 6125 >> Turn in Power over Poison
+    .turnin 5061 >> Turn in Aquatic Form
+    .trainer >> Train your class spells
+    .target Mathrengyl Bearwalker
+]])
