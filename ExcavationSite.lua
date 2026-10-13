@@ -24,6 +24,7 @@ step
     >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Ariena Stormfeather|r
     >>|cRXP_WARN_If you do not have the Menethil Harbor flight path, fly to Thelsamar in Loch Modan instead. It is much faster than running from Ironforge|r
     >>|cRXP_WARN_If you do not have the Thelsamar flight path either, fly to Stormwind, take the Deeprun Tram to Ironforge and run east through Dun Morogh and Loch Modan. Get the Thelsamar flight path on the way|r
+    >>|cRXP_WARN_Or take the boats: from Stormwind harbor to Auberdine in Darkshore, then from Auberdine to Menethil Harbor. No flight paths needed, but you have to wait for two boats|r
     .fly Wetlands >> Fly to Menethil Harbor
     .target Ariena Stormfeather
     .zoneskip Redridge Mountains,1
@@ -45,9 +46,16 @@ step
     .accept 463 >> Accept The Greenwarden
     .target First Mate Fitzsimmons
 step
+    #optional
+    .isOnQuest 95737
     .goto 1437/0,-880.100,-3769.600
     >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Caitlin Grassman|r
     .turnin 95737 >> Turn in Seeking Caitlin
+    .target Caitlin Grassman
+step
+    .goto 1437/0,-880.100,-3769.600
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Caitlin Grassman|r
+    >>|cRXP_WARN_If she does not offer this quest, you need Seeking Caitlin from Shylamiir in the Dwarven District of Stormwind first|r
     .accept 95647 >> Accept Lost in the Thicket Things
     .target Caitlin Grassman
 
