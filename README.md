@@ -21,10 +21,6 @@ Each guide covers picking up every quest, flight paths between zones, the dungeo
 | Druid: Cure Poison + Aquatic Form | 16 | Both chains above in one trip, with one visit to Darkshore and shared stops in Darnassus and Moonglade |
 | Druid: Cat Form | 20 | The Great Cat Spirit chain (or The Great Windborne Cat Spirit for Skyborne), Blessings of the Great Cat Spirit, To Darnassus |
 
-## Copy chat text
-
-WoW doesn't let you select text in chat. Click the note button in the top-right corner of a chat window, or type `/copychat` (or `/copychat 2` for chat window 2), to open that window's chat history in a box where you can select it and copy it with Ctrl+C. Colours, icons and link brackets are stripped, so it pastes as plain text.
-
 ## Install
 
 1. Install RestedXP Guides.
