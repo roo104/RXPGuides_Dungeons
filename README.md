@@ -7,7 +7,9 @@ Alliance dungeon and class quest guides for [RestedXP](https://www.restedxp.com/
 | The Hall of Thanes | 10-15 | Old Ironforge Incursion, The Restless Dead, Important Heirlooms, An Ancient Grudge, The Treaty of Understanding |
 | The Deadmines | 18-21 | The Defias Brotherhood chain, Toxic Soil chain, Red Silk Bandanas, Oh Brother..., Collecting Memories, Underground Assault, The Unsent Letter |
 | Excavation Site: Wetlands | 24-29 | Lost in the Thicket Things, Heartwoven, Young Crocolisk Skins, Highland Hides, The Greenwarden chain, Horrors in the Highland, Songblade Search, Fallen in the Fen, Lost Relic Carry |
+| Blackfathom Deeps | 25-28 | Knowledge in the Deeps, Researching the Corruption, Twilight Falls, In Search of Thaelrid, Blackfathom Villainy, The Heart of the Void |
 | The Stockade | 26-29 | The Color of Blood, Quell the Uprising, Bazil Thredd, The Stockade Riots, Crime and Punishment, What Comes Around... |
+| City of Dalaran | 28-32 | A Green Sample, Power Overwhelming, An Alarming Request, Heart of Disruption, Starving Arcane |
 
 Each guide covers picking up every quest, flight paths between zones, the dungeon run and all turn-ins.
 
