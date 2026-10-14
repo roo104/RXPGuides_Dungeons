@@ -11,3 +11,4 @@ Deadmines.lua
 Stockade.lua
 ExcavationSite.lua
 Druid.lua
+CopyChat.lua
