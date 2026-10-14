@@ -41,6 +41,13 @@ step
     .fp Menethil Harbor >> Get the Menethil Harbor flight path
     .target Shellei Brondir
 step
+    #optional
+    .goto Wetlands,10.69,60.95
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_Innkeeper Helbrek|r
+    .home >> Set your Hearthstone to Menethil Harbor
+    .target Innkeeper Helbrek
+    .bindlocation 2104
+step
     .goto 1437/0,-839.93,-3792.30
     >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_First Mate Fitzsimmons|r
     .accept 463 >> Accept The Greenwarden
@@ -58,6 +65,17 @@ step
     >>|cRXP_WARN_If she does not offer this quest, you need Seeking Caitlin from Shylamiir in the Dwarven District of Stormwind first|r
     .accept 95647 >> Accept Lost in the Thicket Things
     .target Caitlin Grassman
+step
+    .goto 1437/0,-742.75,-3683.97
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_James Halloran|r
+    .accept 484 >> Accept Young Crocolisk Skins
+    .target James Halloran
+step
+    #sticky
+    #completewith CrocsEnd
+    >>Kill |cRXP_ENEMY_Young Wetlands Crocolisks|r between quests. Loot them for their |cRXP_LOOT_Skins|r
+    .complete 484,1 -- Young Crocolisk Skin (4)
+    .mob Young Wetlands Crocolisk
 
 -- The Greenwarden
 step
@@ -124,19 +142,38 @@ step
 
 -- Back to Menethil for Highland Hides
 step
+    #label CrocsEnd
+    >>Finish killing |cRXP_ENEMY_Young Wetlands Crocolisks|r for their |cRXP_LOOT_Skins|r before you go back to Menethil Harbor
+    .complete 484,1 -- Young Crocolisk Skin (4)
+    .mob Young Wetlands Crocolisk
+step
+    #optional
+    .hs >> Hearth to Menethil Harbor
+    .bindlocation 2104,1
+step
     .goto 1437/0,-742.75,-3683.97
     >>Return to Menethil Harbor. |Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_James Halloran|r
-    >>|cRXP_WARN_If he doesn't offer Highland Hides, do his Young Crocolisk Skins quest first|r
+    .turnin 484 >> Turn in Young Crocolisk Skins
     .turnin 469 >> Turn in Daily Delivery
+    .target James Halloran
+step
+    .goto 1437/0,-742.75,-3683.97
+    >>|Tinterface/worldmap/chatbubble_64grey.blp:20|tTalk to |cRXP_FRIENDLY_James Halloran|r
     .accept 98815 >> Accept Highland Hides
     .target James Halloran
 
 -- Excavation Site: Wetlands
 step
-    #completewith ExcavationEnd
-    .goto 1437/0,-2554.900,-3973.300
-    >>Travel to the Excavation Site: Wetlands dungeon entrance and find a group
+    .goto Wetlands,55.50,54.70,30,0
+    .goto Wetlands,53.73,46.62,30,0
+    .goto Wetlands,56.30,58.78,30,0
+    .goto Wetlands,52.44,66.21,30,0
+    .goto Wetlands,48.10,56.42
+    >>Follow the path around the mountain and up the ramp to the Excavation Site: Wetlands dungeon entrance. Find a group
+    >>|cRXP_WARN_Wait for your group at the bottom of the ramp and go up together|r
     .zoneskip Wetlands,1
+step
+    .subzone 16732,2 >> Enter the Excavation Site: Wetlands dungeon
 step
     #completewith ExcavationEnd
     >>Kill |cRXP_ENEMY_Thicket Raptors|r inside the dungeon. Loot them for their |cRXP_LOOT_Hides|r

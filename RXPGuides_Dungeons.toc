@@ -2,7 +2,7 @@
 ## Title: RestedXP Guides - Dungeon Quests
 ## Notes: Alliance dungeon and class quest guides for RestedXP (Classic Forever): The Hall of Thanes, The Deadmines, Excavation Site: Wetlands, The Stockade, Druid class quests
 ## Author: Jonas Pedersen
-## Version: 1.0.0
+## Version: 1.0.1
 ## Dependencies: RXPGuides
 ## X-License: CC BY-NC-SA 4.0
 
